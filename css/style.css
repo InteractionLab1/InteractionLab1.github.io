@@ -15,15 +15,20 @@ img{
 }
 
 p{
-  /*padding-top: 50px;*/
-  /*text-align: center;*/
-  font-size: 25px;
-  /*width: 25%;*/
+  text-align: left;
+}
+
+#consent {
+  margin: 0 auto;
+  width: 75%;
+  font-size: 20px;
+  /*text-align: left;*/
 }
 
 #intro {
   margin: 0 auto;
   width: 600px;
+  font-size: 25px;
 }
 
 #next {
@@ -37,7 +42,6 @@ p{
   font-size: 16px;
   border-radius: 4px;
   position: relative;
-  /*top: 100px;*/
 }
 
 #toggleAI {
