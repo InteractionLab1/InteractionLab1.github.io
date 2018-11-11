@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #6597B1;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+#toggleAI {
+  position: absolute;
+  top: 55px;
+  left: 15px;
+  font-size: 35px;
+  color: #FFEEDB;
+  opacity: 0.5;
+}
+
+#toggleAI:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container {
+  overflow: hidden;
+  /*height: 80px;*/
+  background-color: #FFEEDB;
+  opacity: 0.5;
+}
+
+.container a {
+  float: right;
+  font-size: 16px;
+  color: #031F4B;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#newgame {
+  background-color: #61C9A8;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  /*position: relative;*/
+  z-index: 9999;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #031F4B;
+  padding: 14px 16px;
+  background-color: inherit;
+  height: 47px;
+  cursor: pointer;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+  background-color: #031F4B;
+  color: #FFEEDB;
+}
+
+.dropdown-content {
+  /*visibility: hidden;*/
+  display: none;
+  margin: 0;
+  position: absolute;
+  /*top: 40px;*/
+  background-color: #FFEEDB;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999999999;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #031F4B;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 9999999999;
+}
+
+.dropdown-content a:hover {
+  background-color: #61C9A8;
+}
+
+.dropdown:hover .dropdown-content {
+  /*visibility: visible;*/
+  display: block;
+  z-index: 100;
+}
+
+h1 {
+  margin-top: 10px;
+  position: absolute;
+  color: #61C9A8;
+  float: left;
+  font-size: 25px;
+  left: 80px;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  cursor: pointer;
+  clear: both;
+}
+
+td {
+  width: 150px;
+  height: 150px;
+  font-size: 120px;
+}
+
+.bottom {
+  border-bottom: 6px solid #031F4B;
+}
+
+.right {
+  border-right: 6px solid #031F4B;
+}
+
+.x::after {
+  content: "x";
+  color: #035B95;
+}
+
+.o::after {
+  content: "o";
+  color: #FFEEDB;
+}
+
+#message {
+  font-size: 20px;
+  color: #FFEEDB;
+  margin-top: 10px;
+  z-index: 0 !important;
+}
+
+.selected {
+  background-color: #ADA8B6;
+}
