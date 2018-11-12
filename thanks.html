@@ -19,10 +19,15 @@
   <div id=intro>
     <img src="images/ipalsmile.jpg" alt="Kai">
     <p>
-      Thanks for playing with me! I had a fantastic time.
+      Thanks for playing with me! I had a fantastic time. 
     </p>
+    <p id="pid"></p>
     <!-- <a href="mixedsurvey1.html"><button id="next" type="button">Begin</button></a> -->
   </div>
-
+  <script type="text/javascript">
+    var pid = window.location.search.substring(5);
+    console.log(pid);
+    document.getElementById("pid").innerHTML = "Your participant ID is: " + pid;
+  </script>
 </body>
 </html>
