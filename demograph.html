@@ -28,107 +28,74 @@
       1. Gender:
     </p>
     <label class="container">Male
-      <input type="checkbox">
+      <input type="checkbox" name="male" id="d1.1">
       <span class="checkmark"></span>
     </label>
 
     <label class="container">Female
-      <input type="checkbox">
+      <input type="checkbox" name="female" id="d1.2">
       <span class="checkmark"></span>
     </label>
 
-    <label class="container">Not to Specify
-      <input type="checkbox">
+    <label class="container">Prefer Not to Specify
+      <input type="checkbox" name="no" id="d1.3">
       <span class="checkmark"></span>
     </label>
-    <!-- <div class="inputs">
-      <p>
-        <font size="4">
-          <input type="checkbox" name="male" value="male">Male<br>
-          <input type="checkbox" name="female" value="female">Female<br>
-          <input type="checkbox" name="no" value="no">Prefer Not to Specify<br>
-        </font>
-      </p>
-    </div> -->
     <p>
       2. Age?
     </p>
-    <input type="number" class="defaultTextBox advancedSearchTextBox" />
-    <!-- <input type="number" name="age"> -->
+    <input type="number" id="d2" class="defaultTextBox advancedSearchTextBox" />
     <br>
     <p>
       3. Ethnic Background (select the appropriate box):
     </p>
     <label class="container">Hispanic/Latino
-      <input type="checkbox">
+      <input type="checkbox" name="hisp" id="d3.1">
       <span class="checkmark"></span>
     </label>
     <label class="container">African American
-      <input type="checkbox">
+      <input type="checkbox" name="aa" id="d3.2">
       <span class="checkmark"></span>
     </label>
     <label class="container">White
-      <input type="checkbox">
+      <input type="checkbox" name="white" id="d3.3">
       <span class="checkmark"></span>
     </label>
     <label class="container">Asian
-      <input type="checkbox">
+      <input type="checkbox" name="asian" id="d3.4">
       <span class="checkmark"></span>
     </label>
     <label class="container">Other
-      <input type="checkbox">
+      <input type="checkbox" name="other" id="d3.5">
       <span class="checkmark"></span>
     </label>
-    <!-- <div class="inputs">
-      <p>
-        <font size="4">
-          <input type="checkbox" name="hisp" value="hisp">Hispanic/Latino<br>
-          <input type="checkbox" name="aa" value="aa">African American<br>
-          <input type="checkbox" name="white" value="white">White<br>
-          <input type="checkbox" name="asian" value="asian">Asian<br>
-          <input type="checkbox" name="other" value="other">Other<br>
-        </font>
-      </p>
-    </div> -->
     <p>
       4. Highest Education Received (select the appropriate box):
     </p>
     <label class="container">High School/GED
-      <input type="checkbox">
+      <input type="checkbox" name="hs/ged" id="d4.1">
       <span class="checkmark"></span>
     </label>
     <label class="container">Some College
-      <input type="checkbox">
+      <input type="checkbox" name="college" id="d4.2">
       <span class="checkmark"></span>
     </label>
     <label class="container">Associate's Degree
-      <input type="checkbox">
+      <input type="checkbox" name="associate" id="d4.3">
       <span class="checkmark"></span>
     </label>
     <label class="container">Bachelor's Degree
-      <input type="checkbox">
+      <input type="checkbox" name="bachelor" id="d4.4">
       <span class="checkmark"></span>
     </label>
     <label class="container">Master's Degree
-      <input type="checkbox">
+      <input type="checkbox" name="masters" id="d4.5">
       <span class="checkmark"></span>
     </label>
     <label class="container">Doctorate Degree
-      <input type="checkbox">
+      <input type="checkbox" name="doctorate" id="d4.6">
       <span class="checkmark"></span>
     </label>
-    <!-- <div class="inputs">
-      <p>
-        <font size="4">
-          <input type="checkbox" name="hs" value="hs">High School/GED<br>
-          <input type="checkbox" name="college" value="college">Some College<br>
-          <input type="checkbox" name="associate" value="associate">Associate's Degree<br>
-          <input type="checkbox" name="bachelor" value="bachelor">Bachelor's Degree<br>
-          <input type="checkbox" name="master" value="master">Master's Degree<br>
-          <input type="checkbox" name="doc" value="doc">Doctorate Degree<br>
-        </font>
-      </p>
-    </div> -->
     <p>
       5. Robot knowledge (select a number)
     </p>
@@ -139,18 +106,42 @@
       <span>A lot</span>
     </div>
     <div class="slidecontainer">
-      <input type="range" min="1" max="4" value="1" class="slider" id="myRange">
+      <input type="range" min="1" max="4" value="1" class="slider" id="robot">
     </div>
     <br>
     <br>
-    <!-- <a href="thanks.html"><button id="next" type="button">Next</button></a> -->
-    <button id="next" onclick="nextpg()" type="button">Next</button>
+    <button id="next" onclick="logdata()" type="button">Next</button>
     <br>
     <br>
   </div>
   <script type="text/javascript">
-    function nextpg() {
+    function logdata() {
       var pass = window.location.search;
+      var pid = window.location.search.substring(5);
+      console.log("Participant ID: " + pid);
+      //question 1
+      for(i = 1; i <= 3; i++){
+        if(document.getElementById("d1." + String(i)).checked == true){
+          console.log("Question 1: " + document.getElementById("d1." + String(i)).name);
+        }
+      }
+      //question 2
+      console.log("Question 2: " + document.getElementById("d2").value);
+      //question 3
+      for(i = 1; i <= 5; i++){
+        if(document.getElementById("d3." + String(i)).checked == true){
+          console.log("Question 3: " + document.getElementById("d3." + String(i)).name);
+        }
+      }
+      //question 4
+      for(i = 1; i <= 6; i++){
+        if(document.getElementById("d4." + String(i)).checked == true){
+          console.log("Question 4: " + document.getElementById("d4." + String(i)).name);
+        }
+      }
+      //question 5
+      console.log("Question 5: " + document.getElementById("robot").value);
+
       window.location.href = "thanks.html" + pass;
     }
   </script>

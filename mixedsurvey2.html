@@ -117,7 +117,9 @@
     function logData() {
       // log participant ID and initial questionnaire to console
       var pass = window.location.search;
-      console.log("pass: " + pass); 
+      // console.log("pass: " + pass); 
+      var pid = window.location.search.substring(5);
+      console.log("Participant ID: " + pid);
       // var pID = 10000;
       // console.log("participant ID: " + pID);
       for(i = 1; i <= 6; i++){

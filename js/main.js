@@ -32,6 +32,8 @@ var board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 
 var skippedMove = false;
 
+var sequence = "";
+
 // ===================all the functions below================================
 
 $(document).ready(function() {
@@ -80,59 +82,72 @@ $(document).ready(function() {
 
       // first see which turn
       if (turns % 2 === 0) {
-        console.log("turn: " + turns);
+        // console.log("turn: " + turns);
 
         $("#message").text("It's your turn!"); // change the prompt message
 
         marked.addClass(token1).addClass("animated bounceIn"); // place the token "X"
         gameData.movesP1.push(this.id); // store the sqaure id to an array
-        console.log("num: " + num);
+        // console.log("num: " + num);
         if(num == 11){
+          sequence = sequence + "0";
           board[0] = 'x';
         }
         else if(num == 12){
+          sequence = sequence + "1";
           board[1] = 'x';
         }
         else if(num == 13){
+          sequence = sequence + "2";
           board[2] = 'x';
         }
         else if(num == 21){
+          sequence = sequence + "3";
           board[3] = 'x';
         }
         else if(num == 22){
+          sequence = sequence + "4";
           board[4] = 'x';
         }
         else if(num == 23){
+          sequence = sequence + "5";
           board[5] = 'x';
         }
         else if(num == 31){
+          sequence = sequence + "6";
           board[6] = 'x';
         }
         else if(num == 32){
+          sequence = sequence + "7";
           board[7] = 'x';
         }
         else{
+          sequence = sequence + "8";
           board[8] = 'x';
         }
-        console.log("board: " + board);
+        // console.log("board: " + board);
         turns++;
 
         if ( isWinner(board, 'x') ) {
-          console.log("pooh");
+          // console.log("pooh");
           $("#message").text("You win!");
+          console.log("Board: ")
+          console.log("Win: 1");
           isOver = true; // game is ended
           return;
 
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
+          console.log("Win: 1");
           isOver = true;
           return;
         }
         else {
-          console.log("mickey");
+          // console.log("mickey");
           if ( turns === size ** 2 ) {
             $("#message").text("It's a draw!");
+            console.log("Win: 0");
             isOver = true;
 
             return;
@@ -176,17 +191,20 @@ $(document).ready(function() {
 
         if ( isWinner(board, 'x') ) {
           $("#message").text("You win!");
+          console.log("Win: 1");
           isOver = true;
           return;
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
+          console.log("Win: 1");
           isOver = true;
           return;
         }
         else {
           if ( turns === size ** 2 ) {
             $("#message").text("It's a draw!");
+            console.log("Win: 0");
             isOver = true;
             return;
           }
@@ -223,8 +241,8 @@ $(document).ready(function() {
 
   var isSpaceFree = function(board, move) {
     var spaceIsFree = !(board[move] == 'x' || board[move] == 'o');
-    console.log("board is: " + board);
-    console.log("space: " + spaceIsFree);
+    // console.log("board is: " + board);
+    // console.log("space: " + spaceIsFree);
     return spaceIsFree;
     // var boardX = boardCheck(gameData.token1);
     // var boardO = boardCheck(gameData.token2);
@@ -255,13 +273,13 @@ $(document).ready(function() {
       if(isSpaceFree(copy, i)){
         makeMove(copy, 'o', i);
         if(isWinner(copy, gameData.token2)){
-          console.log("There is a winning move")
+          // console.log("There is a winning move")
           if(skippedMove){
-            console.log("I'm taking the winning move: " + i);
+            // console.log("I'm taking the winning move: " + i);
             return [i, false];
           }
           else{
-            console.log("I am not taking the winning move")
+            // console.log("I am not taking the winning move")
             skippedMove = true;
             movesSkipped.push(i);
           }
@@ -275,7 +293,7 @@ $(document).ready(function() {
         makeMove(copy, 'x', i);
         if(isWinner(copy, gameData.token1)){
           if(skippedMove){
-            console.log("2: i'm returning: " + i);
+            // console.log("2: i'm returning: " + i);
             return [i, false];
           }
           else{
@@ -286,7 +304,7 @@ $(document).ready(function() {
       }
     }
 
-    console.log("skippedMoves: " + movesSkipped);
+    // console.log("skippedMoves: " + movesSkipped);
     var allMoves = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var remainingMoves = [];
     for (var i = 0; i < allMoves.length; i++){
@@ -294,16 +312,16 @@ $(document).ready(function() {
         remainingMoves.push(allMoves[i]);
       }
     }
-    console.log("first try")
+    // console.log("first try")
     var randomMove = chooseRandomMoveFromList(board, remainingMoves);
     if(randomMove == null){
-      console.log("tried again")
+      // console.log("tried again")
       randomMove = chooseRandomMoveFromList(board, allMoves);
       while(board[randomMove] != ' '){
         randomMove = chooseRandomMoveFromList(board, allMoves);
       }
     }
-    console.log("3: i'm returning: " + randomMove);
+    // console.log("3: i'm returning: " + randomMove);
     return [randomMove, skippedMove]
   };
 
