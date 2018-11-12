@@ -22,10 +22,17 @@
   <script type="text/javascript">
     var vids = ["happy", "sad", "neutral", "surprised"];
     var rand = vids[Math.floor(Math.random() * vids.length)];
-    console.log(rand);
+    console.log("Vid 3 played: " + rand);
     document.getElementById("myvid").src = "videos/" + rand + ".mp4";
   </script>
   <br>
-  <a href="mixedsurvey4.html"><button id="next" type="button">Next</button></a>
+  <!-- <a href="mixedsurvey4.html"><button id="next" type="button">Next</button></a> -->
+  <button id="next" onclick="nextpg()" type="button">Next</button>
+  <script type="text/javascript">
+    function nextpg() {
+      var pass = window.location.search;
+      window.location.href = "mixedsurvey4.html" + pass;
+    }
+  </script>
 </body>
 </html>

@@ -36,7 +36,13 @@
           <td id="33"></td>
       </tr>
   </table>
-  <a href="vid2.html"><button id="next" type="button">Next</button></a>
-
+  <!-- <a href="vid2.html"><button id="next" type="button">Next</button></a> -->
+  <button id="next" onclick="nextpg()" type="button">Next</button>
+  <script type="text/javascript">
+    function nextpg() {
+      var pass = window.location.search;
+      window.location.href = "vid2.html" + pass;
+    }
+  </script>
 </body>
 </html>

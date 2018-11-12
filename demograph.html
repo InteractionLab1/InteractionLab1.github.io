@@ -143,9 +143,16 @@
     </div>
     <br>
     <br>
-    <a href="thanks.html"><button id="next" type="button">Next</button></a>
+    <!-- <a href="thanks.html"><button id="next" type="button">Next</button></a> -->
+    <button id="next" onclick="nextpg()" type="button">Next</button>
     <br>
     <br>
   </div>
+  <script type="text/javascript">
+    function nextpg() {
+      var pass = window.location.search;
+      window.location.href = "thanks.html" + pass;
+    }
+  </script>
 </body>
 </html>
