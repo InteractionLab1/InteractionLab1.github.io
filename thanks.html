@@ -16,16 +16,13 @@
   <title>Tic Tac Toe</title>
 </head>
 <body>
-  <video width="80%" autoplay>
-    <source id="myvid" type="video/mp4">
-  </video>
-  <script type="text/javascript">
-    var vids = ["happy", "sad", "neutral", "surprised"];
-    var rand = vids[Math.floor(Math.random() * vids.length)];
-    console.log(rand);
-    document.getElementById("myvid").src = "videos/" + rand + ".mp4";
-  </script>
-  <br>
-  <a href="mixedsurvey4.html"><button id="next" type="button">Next</button></a>
+  <div id=intro>
+    <img src="images/ipalsmile.jpg" alt="Kai">
+    <p>
+      Thanks for playing with me! I had a fantastic time.
+    </p>
+    <!-- <a href="mixedsurvey1.html"><button id="next" type="button">Begin</button></a> -->
+  </div>
+
 </body>
 </html>
