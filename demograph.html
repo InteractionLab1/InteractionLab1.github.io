@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/025f58d995.js"></script>
+  <script src="js/main.js"></script>
+
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div id=consent>
+    <h3>Demographics Questionnaire</h3>
+    <!-- <p>
+      The following statements inquire about your thoughts and feelings in a variety of situations. For each item, indicate how strongly you agree or disagree. When you have decided on your answer, select the corresponding number. READ EACH ITEM CAREFULLY BEFORE RESPONDING. Answer as honestly as you can. Thank you.
+      <br>
+      <br>
+    </p> -->
+
+    <p>
+      1. Gender:
+    </p>
+    <div class="inputs">
+      <p>
+        <font size="4">
+          <input type="checkbox" name="male" value="male">Male<br>
+          <input type="checkbox" name="female" value="female">Female<br>
+          <input type="checkbox" name="no" value="no">Prefer Not to Specify<br>
+        </font>
+      </p>
+    </div>
+    <p>
+      2. Age?
+    </p>
+    <input type="number" name="age">
+    <br>
+    <p>
+      3. Ethnic Background (select the appropriate box):
+    </p>
+    <div class="inputs">
+      <p>
+        <font size="4">
+          <input type="checkbox" name="hisp" value="hisp">Hispanic/Latino<br>
+          <input type="checkbox" name="aa" value="aa">African American<br>
+          <input type="checkbox" name="white" value="white">White<br>
+          <input type="checkbox" name="asian" value="asian">Asian<br>
+          <input type="checkbox" name="other" value="other">Other<br>
+        </font>
+      </p>
+    </div>
+    <p>
+      4. Highest Education Received (select the appropriate box):
+    </p>
+    <div class="inputs">
+      <p>
+        <font size="4">
+          <input type="checkbox" name="hs" value="hs">High School/GED<br>
+          <input type="checkbox" name="college" value="college">Some College<br>
+          <input type="checkbox" name="associate" value="associate">Associate's Degree<br>
+          <input type="checkbox" name="bachelor" value="bachelor">Bachelor's Degree<br>
+          <input type="checkbox" name="master" value="master">Master's Degree<br>
+          <input type="checkbox" name="doc" value="doc">Doctorate Degree<br>
+        </font>
+      </p>
+    </div>
+    <p>
+      5. Robot knowledge (select a number)
+    </p>
+    <!-- <div class="labels">
+      really need to figure out how to format this better
+      <p>Strongly disagree &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undecided &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strongly agree</p> 
+    </div> -->
+    <div class="slidecontainer">
+      <input type="range" min="1" max="4" value="1" class="slider" id="myRange">
+    </div>
+    <br>
+    <br>
+    <a href="thanks.html"><button id="next" type="button">Next</button></a>
+    <br>
+    <br>
+  </div>
+</body>
+</html>
