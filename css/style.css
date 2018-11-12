@@ -8,14 +8,18 @@ body {
   text-align: center;
 }
 
-img{
+img {
   padding-top: 50px;
   text-align: center;
   width: 50%;
 }
 
-p{
+p {
   text-align: left;
+}
+
+video {
+  padding: 10px 0;
 }
 
 #consent {
