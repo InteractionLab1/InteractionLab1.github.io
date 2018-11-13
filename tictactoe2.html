@@ -41,9 +41,12 @@
   <!-- <a href="vid2.html"><button id="next" type="button">Next</button></a> -->
   <button id="next" onclick="nextpg()" type="button">Next</button>
   <script type="text/javascript">
+    document.getElementById("next").disabled = true;
     function nextpg() {
-      var pass = window.location.search;
-      window.location.href = "vid2.html" + pass;
+      if(document.getElementById("next").disabled == false){
+        var pass = window.location.search;
+        window.location.href = "vid2.html" + pass;
+      }
     }
   </script>
 </body>
