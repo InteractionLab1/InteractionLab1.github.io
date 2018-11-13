@@ -131,7 +131,10 @@ $(document).ready(function() {
         if ( isWinner(board, 'x') ) {
           // console.log("pooh");
           $("#message").text("You win!");
-          console.log("Board: ")
+          while(sequence.length < 9){
+            sequence = sequence + "-";
+          }
+          console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true; // game is ended
           return;
@@ -139,6 +142,10 @@ $(document).ready(function() {
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
+          while(sequence.length < 9){
+            sequence = sequence + "-";
+          }
+          console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
           return;
@@ -147,6 +154,10 @@ $(document).ready(function() {
           // console.log("mickey");
           if ( turns === size ** 2 ) {
             $("#message").text("It's a draw!");
+            while(sequence.length < 9){
+              sequence = sequence + "-";
+            }
+            console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
 
@@ -160,30 +171,39 @@ $(document).ready(function() {
           var [move, skippedMove] = getComputerMove(board);
           board[move] = 'o';
           if(move == 0){
+            sequence = sequence + "0";
             $("#11").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 1){
+            sequence = sequence + "1";
             $("#12").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 2){
+            sequence = sequence + "2";
             $("#13").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 3){
+            sequence = sequence + "3";
             $("#21").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 4){
+            sequence = sequence + "4";
             $("#22").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 5){
+            sequence = sequence + "5";
             $("#23").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 6){
+            sequence = sequence + "6";
             $("#31").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else if(move == 7){
+            sequence = sequence + "7";
             $("#32").addClass(gameData.token2).addClass("animated bounceIn");
           }
           else{
+            sequence = sequence + "8";
             $("#33").addClass(gameData.token2).addClass("animated bounceIn");
           }
           turns++;
@@ -191,12 +211,20 @@ $(document).ready(function() {
 
         if ( isWinner(board, 'x') ) {
           $("#message").text("You win!");
+          while(sequence.length < 9){
+            sequence = sequence + "-";
+          }
+          console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
           return;
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
+          while(sequence.length < 9){
+            sequence = sequence + "-";
+          }
+          console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
           return;
@@ -204,6 +232,10 @@ $(document).ready(function() {
         else {
           if ( turns === size ** 2 ) {
             $("#message").text("It's a draw!");
+            while(sequence.length < 9){
+              sequence = sequence + "-";
+            }
+            console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
             return;
