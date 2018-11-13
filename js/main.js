@@ -36,6 +36,15 @@ var sequence = "";
 
 // ===================all the functions below================================
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 $(document).ready(function() {
 
   window.setTimeout(function () {
@@ -137,8 +146,11 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true; // game is ended
+          document.getElementById("next").disabled = false;
+          // var pass = window.location.search;
+          // window.location.href = "vid1.html" + pass;
           return;
-
+          // sleep(150000);
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
@@ -148,7 +160,12 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
+          document.getElementById("next").disabled = true;
+          // var pass = window.location.search;
+          // sleep(15000);
+          // window.location.href = "vid1.html" + pass;
           return;
+          // sleep(150000);
         }
         else {
           // console.log("mickey");
@@ -160,8 +177,12 @@ $(document).ready(function() {
             console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
-
+            document.getElementById("next").disabled = true;
+            // var pass = window.location.search;
+            // sleep(15000);
+            // window.location.href = "vid1.html" + pass;
             return;
+            // sleep(150000);
           }
         }
 
@@ -217,7 +238,12 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
+          document.getElementById("next").disabled = true;
+          // var pass = window.location.search;
+          // sleep(15000);
+          // window.location.href = "vid1.html" + pass;
           return;
+          // sleep(150000);
         } 
         else if(isWinner(board, 'o')){
           $("#message").text("Kai wins!");
@@ -227,7 +253,12 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
+          document.getElementById("next").disabled = true;
+          // var pass = window.location.search;
+          // sleep(15000);
+          // window.location.href = "vid1.html" + pass;
           return;
+          // sleep(150000);
         }
         else {
           if ( turns === size ** 2 ) {
@@ -238,7 +269,12 @@ $(document).ready(function() {
             console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
+            document.getElementById("next").disabled = true;
+            // var pass = window.location.search;
+            // sleep(15000);
+            // window.location.href = "vid1.html" + pass;
             return;
+            // sleep(150000);
           }
           $("#message").text("It's your turn!");
         }

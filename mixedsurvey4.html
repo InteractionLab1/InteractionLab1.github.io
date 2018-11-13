@@ -107,7 +107,28 @@
       // for(i = 1; i <= 6; i++){
       //   console.log("4." + i + ": " + document.getElementById("4." + String(i)).value);
       // }
-      window.location.href = "openended.html" + pass;
+      if (!$("input[name='2.1']:checked").val()) {
+         alert('Please answer #1!');
+      }
+      else if (!$("input[name='2.2']:checked").val()) {
+         alert('Please answer #2!');
+      }
+      else if (!$("input[name='2.3']:checked").val()) {
+         alert('Please answer #3!');
+      }
+      else if (!$("input[name='2.4']:checked").val()) {
+         alert('Please answer #4!');
+      }
+      else if (!$("input[name='2.5']:checked").val()) {
+         alert('Please answer #5!');
+      }
+      else if (!$("input[name='2.6']:checked").val()) {
+         alert('Please answer #6!');
+      }
+      else {
+        // alert('One of the radio buttons is checked!');
+        window.location.href = "openended.html" + pass;
+      }
     }
   </script>
 </body>

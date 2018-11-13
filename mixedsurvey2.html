@@ -107,7 +107,28 @@
       // for(i = 1; i <= 6; i++){
       //   console.log("2." + i + ": " + document.getElementById("2." + String(i)).value);
       // }
-      window.location.href = "tictactoe2.html" + pass;
+      if (!$("input[name='2.1']:checked").val()) {
+         alert('Please answer #1!');
+      }
+      else if (!$("input[name='2.2']:checked").val()) {
+         alert('Please answer #2!');
+      }
+      else if (!$("input[name='2.3']:checked").val()) {
+         alert('Please answer #3!');
+      }
+      else if (!$("input[name='2.4']:checked").val()) {
+         alert('Please answer #4!');
+      }
+      else if (!$("input[name='2.5']:checked").val()) {
+         alert('Please answer #5!');
+      }
+      else if (!$("input[name='2.6']:checked").val()) {
+         alert('Please answer #6!');
+      }
+      else {
+        // alert('One of the radio buttons is checked!');
+        window.location.href = "tictactoe2.html" + pass;
+      }
     }
   </script>
 </body>
