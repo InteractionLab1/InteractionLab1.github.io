@@ -41,7 +41,9 @@
   <script type="text/javascript">
     function nextpg() {
       var pass = window.location.search;
-      window.location.href = "mixedsurvey2.html" + pass;
+      if(document.getElementById("v1").value != ""){
+        window.location.href = "mixedsurvey2.html" + pass;
+      }
     }
   </script>
 </body>

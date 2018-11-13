@@ -40,7 +40,10 @@
   <script type="text/javascript">
     function nextpg() {
       var pass = window.location.search;
-      window.location.href = "mixedsurvey4.html" + pass;
+      if(document.getElementById("v1").value != ""){
+        window.location.href = "mixedsurvey4.html" + pass;
+      }
+      // window.location.href = "mixedsurvey4.html" + pass;
     }
   </script>
 </body>
