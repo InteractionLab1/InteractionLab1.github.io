@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/025f58d995.js"></script>
+  <script src="js/main.js"></script>
+
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div id=consent>
+    <h3>Share Your Thoughts</h3>
+    <p>
+      Do you have any comments or feedback on your experience playing tic tac toe and watching videos of Kai? 
+      <br>
+      <br>
+    </p>
+    <textarea name="comment" style="width:100%" rows="6"></textarea>
+    <br>
+    <br>
+    <button id="next" onclick="logdata()" type="button">Next</button>
+    <br>
+    <br>
+  </div>
+  <script type="text/javascript">
+    function logdata() {
+      var pass = window.location.search;
+      var pid = window.location.search.substring(5);
+      console.log("Participant ID: " + pid);
+      window.location.href = "demograph.html" + pass;
+    }
+  </script>
+</body>
+</html>

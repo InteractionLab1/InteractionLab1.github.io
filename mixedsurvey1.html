@@ -25,88 +25,70 @@
     </p>
 
     <p>
-      1. I often have tender, concerned feelings for iPal.
+      1. I often have tender, concerned feelings for Kai.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.1">
-    </div>
+    <p>
+      <input type="radio" name="1.1" value="1">Strongly disagree<br>
+      <input type="radio" name="1.1" value="2">Disagree<br>
+      <input type="radio" name="1.1" value="3">Neutral<br>
+      <input type="radio" name="1.1" value="4">Agree<br>
+      <input type="radio" name="1.1" value="5">Strongly agree<br>
+    </p>
 
     <p>
       2. I would describe myself as a pretty soft-hearted person.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.2">
-    </div>
+    <p>
+      <input type="radio" name="1.2" value="1">Strongly disagree<br>
+      <input type="radio" name="1.2" value="2">Disagree<br>
+      <input type="radio" name="1.2" value="3">Neutral<br>
+      <input type="radio" name="1.2" value="4">Agree<br>
+      <input type="radio" name="1.2" value="5">Strongly agree<br>
+    </p>
 
     <p>
-      3. Sometimes I don't feel very sorry for iPal when it is having problems.
+      3. Sometimes I don't feel very sorry for Kai when Kai is having problems.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.3">
-    </div>
+    <p>
+      <input type="radio" name="1.3" value="1">Strongly disagree<br>
+      <input type="radio" name="1.3" value="2">Disagree<br>
+      <input type="radio" name="1.3" value="3">Neutral<br>
+      <input type="radio" name="1.3" value="4">Agree<br>
+      <input type="radio" name="1.3" value="5">Strongly agree<br>
+    </p>
 
     <p>
       4. I would feel uneasy if robots really had emotions.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.4">
-    </div>
+    <p>
+      <input type="radio" name="1.4" value="1">Strongly disagree<br>
+      <input type="radio" name="1.4" value="2">Disagree<br>
+      <input type="radio" name="1.4" value="3">Neutral<br>
+      <input type="radio" name="1.4" value="4">Agree<br>
+      <input type="radio" name="1.4" value="5">Strongly agree<br>
+    </p>
 
     <p>
       5. Something bad might happen if robots developed into living beings.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.5">
-    </div>
+    <p>
+      <input type="radio" name="1.5" value="1">Strongly disagree<br>
+      <input type="radio" name="1.5" value="2">Disagree<br>
+      <input type="radio" name="1.5" value="3">Neutral<br>
+      <input type="radio" name="1.5" value="4">Agree<br>
+      <input type="radio" name="1.5" value="5">Strongly agree<br>
+    </p>
 
     <p>
       6. I would feel relaxed talking with robots.
     </p>
-    <div class="labels">
-      <span>Strongly disagree</span>
-      <span>Disagree</span>
-      <span>Neutral</span>
-      <span>Agree</span>
-      <span>Strongly agree</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="5" value="1" class="slider" id="1.6">
-    </div>
+    <p>
+      <input type="radio" name="1.6" value="1">Strongly disagree<br>
+      <input type="radio" name="1.6" value="2">Disagree<br>
+      <input type="radio" name="1.6" value="3">Neutral<br>
+      <input type="radio" name="1.6" value="4">Agree<br>
+      <input type="radio" name="1.6" value="5">Strongly agree<br>
+    </p>
     <br>
     <button onclick="logData()" id="next" type="button">Next</button>
     <br>
@@ -117,9 +99,10 @@
       // log participant ID and initial questionnaire to console
       var pID = Math.floor(Math.random()*9000000) + 1000000;
       console.log("Participant ID: " + pID);
-      for(i = 1; i <= 6; i++){
-        console.log("1." + i + ": " + document.getElementById("1." + String(i)).value);
-      }
+      // for(i = 1; i <= 6; i++){
+      //   var selected = $("input[name='1.'+String(i)]:checked").val()
+      //   console.log("1." + i + ": " + document.getElementByName("1." + String(i)).value);
+      // }
       var pass = "?pID=" + pID;
       window.location.href = "tictactoe.html" + pass;
     }

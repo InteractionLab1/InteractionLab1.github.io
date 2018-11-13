@@ -27,20 +27,11 @@
     <p>
       1. Gender:
     </p>
-    <label class="container">Male
-      <input type="checkbox" name="male" id="d1.1">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Female
-      <input type="checkbox" name="female" id="d1.2">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Prefer Not to Specify
-      <input type="checkbox" name="no" id="d1.3">
-      <span class="checkmark"></span>
-    </label>
+    <p>
+      <input type="radio" name="d1" value="male">Male<br>
+      <input type="radio" name="d1" value="female">Female<br>
+      <input type="radio" name="d1" value="no">Prefer Not to Specify<br>
+    </p>
     <p>
       2. Age?
     </p>
@@ -72,42 +63,23 @@
     <p>
       4. Highest Education Received (select the appropriate box):
     </p>
-    <label class="container">High School/GED
-      <input type="checkbox" name="hs/ged" id="d4.1">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Some College
-      <input type="checkbox" name="college" id="d4.2">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Associate's Degree
-      <input type="checkbox" name="associate" id="d4.3">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Bachelor's Degree
-      <input type="checkbox" name="bachelor" id="d4.4">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Master's Degree
-      <input type="checkbox" name="masters" id="d4.5">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Doctorate Degree
-      <input type="checkbox" name="doctorate" id="d4.6">
-      <span class="checkmark"></span>
-    </label>
+    <p>
+      <input type="radio" name="d4" value="hs">High School/GED<br>
+      <input type="radio" name="d4" value="college">Some College<br>
+      <input type="radio" name="d4" value="associates">Associate's Degree<br>
+      <input type="radio" name="d4" value="bachelors">Bachelor's Degree<br>
+      <input type="radio" name="d4" value="masters">Master's Degree<br>
+      <input type="radio" name="d4" value="doctorate">Doctorate Degree<br>
+    </p>
     <p>
       5. Robot knowledge (select a number)
     </p>
-    <div class="labels">
-      <span>None</span>
-      <span>A little</span>
-      <span>Some</span>
-      <span>A lot</span>
-    </div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="4" value="1" class="slider" id="robot">
-    </div>
+    <p>
+      <input type="radio" name="d5" value="1">None<br>
+      <input type="radio" name="d5" value="2">A little<br>
+      <input type="radio" name="d5" value="3">Some<br>
+      <input type="radio" name="d5" value="4">A lot<br>
+    </p>
     <br>
     <br>
     <button id="next" onclick="logdata()" type="button">Next</button>
@@ -120,11 +92,11 @@
       var pid = window.location.search.substring(5);
       console.log("Participant ID: " + pid);
       //question 1
-      for(i = 1; i <= 3; i++){
-        if(document.getElementById("d1." + String(i)).checked == true){
-          console.log("Question 1: " + document.getElementById("d1." + String(i)).name);
-        }
-      }
+      // for(i = 1; i <= 3; i++){
+      //   if(document.getElementById("d1." + String(i)).checked == true){
+      //     console.log("Question 1: " + document.getElementById("d1." + String(i)).name);
+      //   }
+      // }
       //question 2
       console.log("Question 2: " + document.getElementById("d2").value);
       //question 3
@@ -134,13 +106,13 @@
         }
       }
       //question 4
-      for(i = 1; i <= 6; i++){
-        if(document.getElementById("d4." + String(i)).checked == true){
-          console.log("Question 4: " + document.getElementById("d4." + String(i)).name);
-        }
-      }
+      // for(i = 1; i <= 6; i++){
+      //   if(document.getElementById("d4." + String(i)).checked == true){
+      //     console.log("Question 4: " + document.getElementById("d4." + String(i)).name);
+      //   }
+      // }
       //question 5
-      console.log("Question 5: " + document.getElementById("robot").value);
+      // console.log("Question 5: " + document.getElementById("robot").value);
 
       window.location.href = "thanks.html" + pass;
     }
