@@ -160,7 +160,7 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
-          document.getElementById("next").disabled = true;
+          document.getElementById("next").disabled = false;
           // var pass = window.location.search;
           // sleep(15000);
           // window.location.href = "vid1.html" + pass;
@@ -177,7 +177,7 @@ $(document).ready(function() {
             console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
-            document.getElementById("next").disabled = true;
+            document.getElementById("next").disabled = false;
             // var pass = window.location.search;
             // sleep(15000);
             // window.location.href = "vid1.html" + pass;
@@ -238,7 +238,7 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
-          document.getElementById("next").disabled = true;
+          document.getElementById("next").disabled = false;
           // var pass = window.location.search;
           // sleep(15000);
           // window.location.href = "vid1.html" + pass;
@@ -253,7 +253,7 @@ $(document).ready(function() {
           console.log("Sequence: " + sequence);
           console.log("Win: 1");
           isOver = true;
-          document.getElementById("next").disabled = true;
+          document.getElementById("next").disabled = false;
           // var pass = window.location.search;
           // sleep(15000);
           // window.location.href = "vid1.html" + pass;
@@ -269,7 +269,7 @@ $(document).ready(function() {
             console.log("Sequence: " + sequence);
             console.log("Win: 0");
             isOver = true;
-            document.getElementById("next").disabled = true;
+            document.getElementById("next").disabled = false;
             // var pass = window.location.search;
             // sleep(15000);
             // window.location.href = "vid1.html" + pass;
