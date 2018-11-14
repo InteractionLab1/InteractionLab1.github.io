@@ -96,7 +96,10 @@
   </div>
   <script type="text/javascript">
     function logData() {
-      // log participant ID and initial questionnaire to console
+      var pass = window.location.search;
+      var pid = window.location.search.substring(5,12);
+      var qs = window.location.search.substring(16) + "1";
+      console.log("qs: " + qs);
       if (!$("input[name='1.1']:checked").val()) {
          alert('Please answer #1!');
       }
@@ -116,22 +119,21 @@
          alert('Please answer #6!');
       }
       else {
-        // alert('One of the radio buttons is checked!');
-        var pID = Math.floor(Math.random()*9000000) + 1000000;
-        console.log("Participant ID: " + pID);
+        console.log("Participant ID: " + pid);
+        console.log("Questionnaire 1");
         console.log("Question 1.1: " + $("input[name='1.1']:checked").val());
         console.log("Question 1.2: " + $("input[name='1.2']:checked").val());
         console.log("Question 1.3: " + $("input[name='1.3']:checked").val());
         console.log("Question 1.4: " + $("input[name='1.4']:checked").val());
         console.log("Question 1.5: " + $("input[name='1.5']:checked").val());
         console.log("Question 1.6: " + $("input[name='1.6']:checked").val());
-        var pass = "?pID=" + pID;
-        window.location.href = "tictactoe.html" + pass;
+        if(qs.length == 4){
+          window.location.href = "openended.html" + pass + "1";
+        }
+        else{
+          window.location.href = "tictactoe.html" + pass + "1";
+        }
       }
-      // for(i = 1; i <= 6; i++){
-      //   var selected = $("input[name='1.'+String(i)]:checked").val()
-      //   console.log("1." + i + ": " + document.getElementByName("1." + String(i)).value);
-      // }
     }
   </script>
 </body>

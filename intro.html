@@ -21,8 +21,16 @@
     <p>
       Meet Kai! Kai is a robot that lives in the Interaction Lab at USC. Kai’s favorite thing to do is play tic-tac-toe with people. We will first ask you some questions and then the two of you will play a few games of tic-tac-toe together. You will make a move first, and then Kai will make a move after you. This will continue until one of you wins or the board is full (a tie or “cat’s game”). After each game of tic-tac-toe, you will see and hear from Kai, and then we will ask you to answer a few questions about your experience. Let’s get started!
     </p>
-    <a href="mixedsurvey1.html"><button id="next" type="button">Begin</button></a>
+    <button onclick="logData()" id="next" type="button">Begin</button>
   </div>
-
+  <script type="text/javascript">
+    function logData() {
+      var pID = Math.floor(Math.random()*9000000) + 1000000;
+      console.log("Participant ID: " + pID);
+      var q = Math.floor(Math.random() * 4) + 1;
+      var pass = "?pID=" + pID + "&qs=";
+      window.location.href = "mixedsurvey" + String(q) + ".html" + pass;
+    }
+  </script>
 </body>
 </html>

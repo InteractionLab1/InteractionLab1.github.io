@@ -90,23 +90,16 @@
       <input type="radio" name="4.6" value="5">Strongly agree<br>
     </p>
     <br>
-    <!-- <a href="demograph.html"><button onclick="logData()" id="next" type="button">Next</button></a> -->
     <button onclick="logData()" id="next" type="button">Next</button>
     <br>
     <br>
   </div>
   <script type="text/javascript">
     function logData() {
-      // log participant ID and initial questionnaire to console
       var pass = window.location.search;
-      // console.log("pass: " + pass);
-      var pid = window.location.search.substring(5);
-      console.log("Participant ID: " + pid);
-      // var pID = 10000;
-      // console.log("participant ID: " + pID);
-      // for(i = 1; i <= 6; i++){
-      //   console.log("4." + i + ": " + document.getElementById("4." + String(i)).value);
-      // }
+      var pid = window.location.search.substring(5,12);
+      var qs = window.location.search.substring(16) + "4";
+      console.log("qs: " + qs);
       if (!$("input[name='4.1']:checked").val()) {
          alert('Please answer #1!');
       }
@@ -126,8 +119,21 @@
          alert('Please answer #6!');
       }
       else {
-        // alert('One of the radio buttons is checked!');
-        window.location.href = "openended.html" + pass;
+        console.log("Participant ID: " + pid);
+        console.log("Questionnaire 4");
+        console.log("Question 4.1: " + $("input[name='4.1']:checked").val());
+        console.log("Question 4.2: " + $("input[name='4.2']:checked").val());
+        console.log("Question 4.3: " + $("input[name='4.3']:checked").val());
+        console.log("Question 4.4: " + $("input[name='4.4']:checked").val());
+        console.log("Question 4.5: " + $("input[name='4.5']:checked").val());
+        console.log("Question 4.6: " + $("input[name='4.6']:checked").val());
+        // window.location.href = "openended.html" + pass + "4";
+        if(qs.length == 4){
+          window.location.href = "openended.html" + pass + "4";
+        }
+        else{
+          window.location.href = "tictactoe.html" + pass + "4";
+        }
       }
     }
   </script>
