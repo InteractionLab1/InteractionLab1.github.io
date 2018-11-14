@@ -31,7 +31,7 @@
     Were you able to watch Kai's reaction?
   </h2>
   <div style="margin:auto;width:180px;">
-    <input type="text" align="center" id="v1" class="defaultTextBox advancedSearchTextBox" />
+    <input type="text" align="center" id="v2" class="defaultTextBox advancedSearchTextBox" />
   </div>
   <br>
   <br>
@@ -41,7 +41,8 @@
   <script type="text/javascript">
     function nextpg() {
       var pass = window.location.search;
-      if(document.getElementById("v1").value != ""){
+      if(document.getElementById("v2").value != ""){
+        console.log("Vid 2 Seen: " + document.getElementById("v2").value);
         window.location.href = "mixedsurvey3.html" + pass;
       }
       // window.location.href = "mixedsurvey3.html" + pass;

@@ -101,7 +101,7 @@
       var pass = window.location.search;
       // console.log("pass: " + pass);
       var pid = window.location.search.substring(5);
-      console.log("Participant ID: " + pid);
+      // console.log("Participant ID: " + pid);
       // var pID = 10000;
       // console.log("participant ID: " + pID);
       // for(i = 1; i <= 6; i++){
@@ -127,6 +127,13 @@
       }
       else {
         // alert('One of the radio buttons is checked!');
+        console.log("Participant ID: " + pid);
+        console.log("Question 3.1: " + $("input[name='3.1']:checked").val());
+        console.log("Question 3.2: " + $("input[name='3.2']:checked").val());
+        console.log("Question 3.3: " + $("input[name='3.3']:checked").val());
+        console.log("Question 3.4: " + $("input[name='3.4']:checked").val());
+        console.log("Question 3.5: " + $("input[name='3.5']:checked").val());
+        console.log("Question 3.6: " + $("input[name='3.6']:checked").val());
         window.location.href = "tictactoe3.html" + pass;
       }
     }
